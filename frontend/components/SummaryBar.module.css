@@ -1,0 +1,46 @@
+.bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.stat {
+  border-radius: var(--r-lg);
+  padding: 14px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.statLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  opacity: 0.65;
+}
+.statValue {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.1;
+}
+.statUnit {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 1px;
+}
+
+.stat_terracotta { background: var(--terracotta-light); color: var(--terracotta); }
+.stat_sky        { background: var(--sky-light);        color: var(--sky);        }
+.stat_sage       { background: var(--sage-light);       color: var(--sage);       }
+.stat_lavender   { background: var(--lavender-light);   color: var(--lavender);   }
+.stat_slate      { background: var(--slate-light);      color: var(--slate);      }
+.stat_goldenrod  { background: var(--goldenrod-light);  color: var(--goldenrod);  }
+
+@media (max-width: 800px) {
+  .bar { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 500px) {
+  .bar { grid-template-columns: repeat(2, 1fr); }
+}

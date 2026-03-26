@@ -1,0 +1,84 @@
+.card {
+  background: #fff;
+  border-radius: var(--r-lg);
+  padding: 14px 14px 12px;
+  border: 1px solid var(--cream-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.card_terracotta { border-top: 3px solid var(--terracotta); }
+.card_lavender   { border-top: 3px solid var(--lavender);   }
+.card_sage       { border-top: 3px solid var(--sage);       }
+.card_sky        { border-top: 3px solid var(--sky);        }
+.card_slate      { border-top: 3px solid var(--slate);      }
+.card_goldenrod  { border-top: 3px solid var(--goldenrod);  }
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.card:hover .actions { opacity: 1; }
+.actionBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--r-sm);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+.actionBtn:hover { background: var(--cream-dark); }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.chip {
+  font-size: 11.5px;
+  background: var(--cream-dark);
+  color: var(--ink-soft);
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-weight: 400;
+}
+.chipHighlight {
+  background: var(--sage-light);
+  color: var(--sage);
+}
+
+.notes {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  border-top: 1px solid var(--cream-border);
+  padding-top: 8px;
+  margin-top: 2px;
+}
